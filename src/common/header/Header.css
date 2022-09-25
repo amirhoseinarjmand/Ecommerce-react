@@ -1,0 +1,76 @@
+/* ------------ Navbr ------------ */
+.Navbar {
+  position: relative;
+}
+
+.right {
+  padding: 0.7rem 0;
+}
+
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.header__bar {
+  padding: 0.5rem;
+  background-color: #f6f9fc;
+  cursor: pointer;
+}
+
+.navbar__menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.navbar__menu > li {
+  cursor: pointer;
+}
+
+/* ----- bar menu ----- */
+
+.bar__menu {
+  position: absolute;
+  top: 0.7rem;
+  padding: 0.7rem 0.1rem 0.7rem 2rem;
+  background-color: #f6f9fc;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.bar__menu > li > a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: #000;
+}
+
+/* ----- left ----- */
+
+.left {
+  background-color: #f6f9fc;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 576px) {
+  .header__bar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar__menu {
+    display: none;
+  }
+}
+
+/* ------------ Navbr ------------ */

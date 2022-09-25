@@ -1,38 +1,30 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Vazir";
+
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  direction: rtl;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --border: rgba(128, 128, 128, 0.332);
+  --bgColor: #e6123d;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: "Vazir";
+  src: url("../public/Vazir/Vazir.eot");
+  src: url("../public/Vazir/Vazir.eot?#iefix") format("embedded-opentype"),
+    url("../public/Vazir/Vazir.woff2") format("woff2"),
+    url("../public/Vazir/Vazir.woff") format("woff"),
+    url("../public/Vazir/Vazir.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
