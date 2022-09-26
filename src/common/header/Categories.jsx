@@ -1,4 +1,5 @@
 import React from "react";
+import Datas from "./CategoriesData";
 import { useState } from "react";
 import { BiBorderAll } from "react-icons/bi";
 import { Link } from "react-router-dom";
@@ -22,29 +23,19 @@ const Categories = () => {
 
         {openCategoryMenu ? (
           <ul className="categoryMenu rounded-2 shadow-sm" dir="rtl">
-            <Link to="/">
-              <li onClick={changeCategoryMenu} className="rounded-2">
-                سلام
-              </li>
-            </Link>
-
-            <Link to="/">
-              <li onClick={changeCategoryMenu} className="rounded-2">
-                سلام 2
-              </li>
-            </Link>
-
-            <Link to="/">
-              <li onClick={changeCategoryMenu} className="rounded-2">
-                سلام 3
-              </li>
-            </Link>
-
-            <Link to="/">
-              <li onClick={changeCategoryMenu} className="rounded-2">
-                سلام 4
-              </li>
-            </Link>
+            {Datas.map((data, index) => {
+              return (
+                <Link to="/" key={index}>
+                  <li
+                    onClick={changeCategoryMenu}
+                    className="category-item rounded-2"
+                  >
+                    <img src={data.cateImg} alt="" style={{ width: "2rem" }} />
+                    <span>{data.cateName}</span>
+                  </li>
+                </Link>
+              );
+            })}
           </ul>
         ) : null}
       </div>

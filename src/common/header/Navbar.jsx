@@ -33,41 +33,29 @@ export default function Navbar() {
               <IoIosClose style={{ color: "#fff" }} size={25} />
             </span>
 
-            <li>
-              <Link to="/" onClick={() => setBarOpen(false)}>
-                خانه
-              </Link>
-            </li>
+            <Link to="/" onClick={() => setBarOpen(false)}>
+              <li>خانه</li>
+            </Link>
 
-            <li>
-              <Link to="/" onClick={() => setBarOpen(false)}>
-                محصولات پرفروش
-              </Link>
-            </li>
+            <Link to="/" onClick={() => setBarOpen(false)}>
+              <li>محصولات پرفروش</li>
+            </Link>
 
-            <li>
-              <Link to="/" onClick={() => setBarOpen(false)}>
-                محصولات تازه
-              </Link>
-            </li>
+            <Link to="/" onClick={() => setBarOpen(false)}>
+              <li>محصولات تازه</li>
+            </Link>
 
-            <li>
-              <Link to="/" onClick={() => setBarOpen(false)}>
-                درباره ی ما
-              </Link>
-            </li>
+            <Link to="/" onClick={() => setBarOpen(false)}>
+              <li>درباره ی ما</li>
+            </Link>
 
-            <li>
-              <Link to="/" onClick={() => setBarOpen(false)}>
-                تماس با ما
-              </Link>
-            </li>
+            <Link to="/" onClick={() => setBarOpen(false)}>
+              <li>تماس با ما</li>
+            </Link>
 
-            <li>
-              <Link to="/" onClick={() => setBarOpen(false)}>
-                نمایندگی ها
-              </Link>
-            </li>
+            <Link to="/" onClick={() => setBarOpen(false)}>
+              <li>نمایندگی ها</li>
+            </Link>
           </ul>
         )}
 
