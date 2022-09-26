@@ -1,11 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import { BiBorderAll } from "react-icons/bi";
-import { FaAngleDown } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 import { IoIosClose } from "react-icons/io";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import Categories from "./Categories";
 
 export default function Navbar() {
   const [barOpen, setBarOpen] = useState(false);
@@ -94,17 +93,8 @@ export default function Navbar() {
         </ul>
       </section>
 
-      <section className="left rounded-2" dir="ltr">
-        <span>
-          <BiBorderAll size={25} />
-        </span>
-        <span>
-          {" "}
-          دسته بندی ها{" "}
-          <span>
-            <FaAngleDown size={13} />
-          </span>
-        </span>
+      <section className="left" dir="ltr">
+        <Categories />
       </section>
     </header>
   );

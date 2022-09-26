@@ -1,7 +1,7 @@
 /* ------------ Navbr ------------ */
 .Navbar {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 3rem;
 }
@@ -68,15 +68,6 @@
   left: 5px;
   background-color: #000;
   margin: 0.5rem;
-}
-
-/* ----- left ----- */
-
-.left {
-  background-color: var(--themeGray);
-  padding: 0.5rem 1rem;
-  margin: 0.3rem;
-  cursor: pointer;
 }
 
 @media (min-width: 576px) {
@@ -185,9 +176,58 @@
   right: 0;
   left: 0;
   width: 100%;
+  background-color: #fff;
   padding: 10px 5rem;
   z-index: 1000;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 
 /* ------------ Search ------------ */
+/* ------------ Categories ------------ */
+
+.Categories {
+  background-color: var(--themeGray);
+  margin: 0.3rem;
+  position: relative;
+}
+
+.Categories > button {
+  border: none;
+}
+
+.Categories > button::after {
+  transform: translateY(50%);
+}
+
+.categoryMenu {
+  position: absolute;
+  background-color: var(--themeGray);
+  top: 110%;
+  left: -50%;
+  width: 200%;
+  list-style-type: none;
+  padding: 10px 15px;
+  z-index: 10;
+}
+
+.categoryMenu > a {
+  text-decoration: none;
+}
+
+.categoryMenu > a > li {
+  padding: 10px 1rem;
+  color: #000;
+}
+
+.categoryMenu > a > li:hover {
+  background-color: #fff;
+}
+
+@media (max-width: 576px) {
+  .categoryMenu {
+    left: 0;
+    width: 150%;
+  }
+}
+
+/* ------------ Categories ------------ */
