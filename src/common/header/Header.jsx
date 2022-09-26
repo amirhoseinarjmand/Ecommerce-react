@@ -6,9 +6,11 @@ import Navbar from "./Navbar";
 export default function Header() {
   return (
     <>
-      <Head />
-      <Search />
-      <Navbar />
+      <div className="Header shadow-sm">
+        <Head />
+        <Search />
+        <Navbar />
+      </div>
     </>
   );
 }

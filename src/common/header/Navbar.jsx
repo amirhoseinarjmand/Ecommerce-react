@@ -3,6 +3,7 @@ import { useState } from "react";
 import { BiBorderAll } from "react-icons/bi";
 import { FaAngleDown } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
+import { IoIosClose } from "react-icons/io";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
@@ -18,7 +19,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="Navbar container py-2">
+    <header className="Navbar container-lg">
       <section className="right">
         {!barOpen ? (
           <div className="header__bar rounded" onClick={openBarToggle}>
@@ -26,33 +27,70 @@ export default function Navbar() {
           </div>
         ) : (
           <ul className="bar__menu rounded">
+            <span
+              className="close-bar__menu rounded-circle"
+              onClick={() => setBarOpen(false)}
+            >
+              <IoIosClose style={{ color: "#fff" }} size={25} />
+            </span>
+
             <li>
-              <Link to="home" onClick={() => setBarOpen(false)}>
+              <Link to="/" onClick={() => setBarOpen(false)}>
                 خانه
               </Link>
             </li>
 
             <li>
-              <Link to="menu" onClick={() => setBarOpen(false)}>
-                منو
+              <Link to="/" onClick={() => setBarOpen(false)}>
+                محصولات پرفروش
               </Link>
             </li>
 
             <li>
-              <Link to="footer" onClick={() => setBarOpen(false)}>
+              <Link to="/" onClick={() => setBarOpen(false)}>
+                محصولات تازه
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/" onClick={() => setBarOpen(false)}>
+                درباره ی ما
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/" onClick={() => setBarOpen(false)}>
                 تماس با ما
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/" onClick={() => setBarOpen(false)}>
+                نمایندگی ها
               </Link>
             </li>
           </ul>
         )}
 
-        <ul className="navbar__menu pe-sm-3">
-          <li>خانه</li>
-          <li>محصولات پرفروش</li>
-          <li>محصولات تازه</li>
-          <li>درباره ی ما</li>
-          <li>تماس با ما</li>
-          <li>نمایندگی ها</li>
+        <ul className="navbar__menu">
+          <li>
+            <Link to="/">خانه</Link>
+          </li>
+          <li>
+            <Link to="/">محصولات پرفروش</Link>
+          </li>
+          <li>
+            <Link to="/">محصولات تازه</Link>
+          </li>
+          <li>
+            <Link to="/">درباره ی ما</Link>
+          </li>
+          <li>
+            <Link to="/">تماس با ما</Link>
+          </li>
+          <li>
+            <Link to="/">نمایندگی ها</Link>
+          </li>
         </ul>
       </section>
 
