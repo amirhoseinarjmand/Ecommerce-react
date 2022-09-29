@@ -1,4 +1,9 @@
+.Header {
+  margin-bottom: 0.5rem;
+}
+
 /* ------------ Navbr ------------ */
+
 .Navbar {
   display: flex;
   align-items: flex-start;

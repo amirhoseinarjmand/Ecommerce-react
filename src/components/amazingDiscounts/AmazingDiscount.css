@@ -1,0 +1,95 @@
+/* ___________ amazing discount ___________ */
+
+.Amazing-discount {
+  padding: 0 0 2rem 0;
+}
+
+.title {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  padding-right: 12px;
+}
+
+.card-container {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.card-container > :nth-child(1) {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  direction: ltr;
+  font-size: smaller;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--themeRed);
+  font-family: Segoe UI;
+  padding: 1px 10px;
+}
+
+.card-container-body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.2rem;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.card-container-body > :nth-child(2) {
+  color: var(--themeRed);
+}
+
+.card-container-body > :nth-child(3) {
+  font-weight: bold;
+}
+
+.card-container-body > button {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  width: 2.3rem;
+  height: 2.3rem;
+  background-color: #fff;
+  border: 1px solid var(--border);
+  color: var(--themeRed);
+  transition: 0.3s;
+}
+
+.card-container-body > button:hover {
+  background-color: var(--themeRed);
+  color: #fff;
+}
+
+.AmazingCard .swiper-button-next,
+.AmazingCard .swiper-button-prev {
+  background-color: var(--themeRed);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  color: #fff;
+}
+
+.AmazingCard .swiper-button-next {
+  left: 0 !important;
+}
+
+.AmazingCard .swiper-button-prev {
+  right: 0 !important;
+}
+
+.AmazingCard .swiper-button-next::after,
+.AmazingCard .swiper-button-prev::after {
+  font-size: 25px;
+}
+
+/* ___________ amazing discount ___________ */

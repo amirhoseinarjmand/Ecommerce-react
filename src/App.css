@@ -12,10 +12,21 @@ body {
   direction: rtl;
 }
 
+/* ____ Pages ____ */
+
+.Pages {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  background-color: var(--themeGray);
+}
+
+/* ____ Pages ____ */
+
 :root {
   --border: rgba(128, 128, 128, 0.332);
   --themeGray: #f6f9fc;
-  --themeRed: #e6123d;;
+  --themeRed: #e6123d;
 }
 
 /* class */
