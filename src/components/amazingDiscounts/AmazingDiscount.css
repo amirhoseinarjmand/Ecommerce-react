@@ -32,6 +32,30 @@
   padding: 1px 10px;
 }
 
+.heart {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.card-container:hover .heart {
+  opacity: 1;
+}
+
+.heart__count {
+  background-color: #0f3460;
+  font-size: smaller;
+  font-weight: bolder;
+  width: 1.7rem;
+  height: 1.2rem;
+  padding-top: 0.2rem;
+  color: #fff;
+}
+
 .card-container-body {
   position: relative;
   display: flex;

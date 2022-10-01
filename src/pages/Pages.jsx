@@ -1,5 +1,5 @@
 import React from "react";
-import { Home, AmazingDiscount } from "../components";
+import { Home, AmazingDiscount, Header } from "../components";
 
 const Pages = () => {
   return (
@@ -11,6 +11,8 @@ const Pages = () => {
           boxShadow: "0 1.2rem 1rem -1rem rgba(0,0,0,.15)",
         }}
       >
+        <Header />
+
         <Home />
       </section>
 

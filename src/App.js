@@ -1,19 +1,44 @@
+import React, { useState } from "react";
 import "./App.css";
-import { Header } from "./components";
 import { Routes, Route } from "react-router-dom";
-import Pages from "./pages/Pages";
+import { Pages, ShopCart } from "./components";
+import { pageContext } from "./context/pageContext";
 
 function App() {
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCartItems = (product) => {
+    const existProduct = cartItems.find((item) => item.id === product.id);
+
+    if (existProduct) {
+      setCartItems(
+        cartItems.map((item) =>
+          item.id === product.id
+            ? { ...existProduct, qty: existProduct.qty + 1 }
+            : item
+        )
+      );
+    } else {
+      setCartItems([...cartItems, { ...product, qty: 1 }]);
+    }
+  };
+
   return (
     <div className="App">
-      <Header />
+      <pageContext.Provider
+        value={{
+          cartItems,
+          setCartItems,
+          addToCartItems,
+        }}
+      >
+        <Routes>
+          <Route path="/" element={<Pages />} />
+          <Route path="/shopCart" element={<ShopCart />} />
+        </Routes>
 
-      <Routes>
-        <Route path="/" element={<Pages />} />
-      </Routes>
-
-      {/* <Footer /> */}
-      <div style={{ height: "200rem" }}></div>
+        <div style={{ height: "200rem" }}></div>
+      </pageContext.Provider>
     </div>
   );
 }

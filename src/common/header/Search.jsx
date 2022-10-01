@@ -1,4 +1,6 @@
 import "./Header.css";
+import { useContext } from "react";
+import { pageContext } from "../../context/pageContext";
 import Logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
 import { HiOutlineSearch } from "react-icons/hi";
@@ -7,6 +9,8 @@ import { BiLogIn } from "react-icons/bi";
 import { BsFillPersonFill } from "react-icons/bs";
 
 export default function Search() {
+  const { cartItems } = useContext(pageContext);
+
   window.addEventListener("scroll", function () {
     const search = this.document.querySelector(".Search");
 
@@ -49,8 +53,9 @@ export default function Search() {
         </section>
 
         <div className="shop__icon rounded-circle center">
-          <Link to="/factore">
-            <span className="badge center">0</span>
+          <Link to="/shopCart" className="center">
+            <span className="badge center">{cartItems.length}</span>
+
             <FaShoppingBag size={17} style={{ color: "#000" }} />
           </Link>
         </div>
