@@ -4,4 +4,8 @@ export const pageContext = createContext({
   cartItems: {},
   setCartItems: () => {},
   addToCartItems: () => {},
+  decreasefromCartItems: () => {},
+  deleteProductFromCartItems: () => {},
+  showProductPrice: () => {},
+  totalPrice: () => {},
 });

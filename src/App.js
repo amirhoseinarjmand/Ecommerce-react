@@ -1,12 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { Pages, ShopCart } from "./components";
 import { pageContext } from "./context/pageContext";
 
-function App() {
-  const [cartItems, setCartItems] = useState([]);
+// @desc: get product from LocalStorage
+const getDatasFromLocalStorage = () => {
+  const data = localStorage.getItem("product");
 
+  if (data) {
+    return JSON.parse(data);
+  } else {
+    return [];
+  }
+};
+
+function App() {
+  const [cartItems, setCartItems] = useState(getDatasFromLocalStorage());
+
+  // ________________________ ShopCart __________________________
+
+  // @desc: save product in LocalStorage
+  useEffect(() => {
+    localStorage.setItem("product", JSON.stringify(cartItems));
+  }, [cartItems]);
+
+  // @desc: send product's items to shop cart
   const addToCartItems = (product) => {
     const existProduct = cartItems.find((item) => item.id === product.id);
 
@@ -23,6 +42,45 @@ function App() {
     }
   };
 
+  // @desc: decrease Number of products from shop cart
+  const decreasefromCartItems = (product) => {
+    const existProduct = cartItems.find((item) => item.id === product.id);
+
+    setCartItems(
+      cartItems.map((item) =>
+        item.id === product.id
+          ? { ...existProduct, qty: item.qty > 1 ? existProduct.qty - 1 : 1 }
+          : item
+      )
+    );
+  };
+
+  // @desc: show price of products for all qty in shop cart
+  const showProductPrice = (product) => {
+    return product.price * product.qty;
+  };
+
+  // @desc: calucate total of products in shop cart
+  const totalPrice = cartItems.reduce(
+    (price, item) => price + item.qty * item.price,
+    0
+  );
+
+  // @desc: delete one product from shop cart
+  const deleteProductFromCartItems = (id) => {
+    const filteredCartItems = cartItems.filter((item) => {
+      return item.id !== id;
+    });
+
+    setCartItems(filteredCartItems);
+  };
+
+  const showPriceQty = (product) => {
+    
+  }
+
+  // ________________________ ShopCart __________________________
+
   return (
     <div className="App">
       <pageContext.Provider
@@ -30,6 +88,10 @@ function App() {
           cartItems,
           setCartItems,
           addToCartItems,
+          deleteProductFromCartItems,
+          decreasefromCartItems,
+          showProductPrice,
+          totalPrice,
         }}
       >
         <Routes>

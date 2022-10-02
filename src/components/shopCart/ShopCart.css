@@ -16,18 +16,28 @@
 /* ________ shop-cart-empty ________ */
 
 .shop-cart-empty {
-  background-color: #fff;
+  background-color: var(--themeGray);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 30rem;
   color: var(--themeRed);
   font-weight: bold;
-  font-size: large;
+  font-size: larger;
 }
 
-.shop-cart-empty > span {
+.shop-cart-empty-text {
+  background-color: #fff;
+  padding: 3rem 0;
+  width: 85%;
+  text-align: center;
   transition: 0.3s;
+  margin: 0;
 }
 
-.shop-cart-empty > span:hover {
-  transform: scale(1.09);
+.shop-cart-empty-text:hover {
+  transform: scale(1.02);
 }
 
 /* ________ shop-cart-empty ________ */
@@ -40,20 +50,122 @@
   gap: 3rem;
 }
 
-.shop-cart-full__right {
-  background-color: #fff;
-  padding: 0 1rem;
-}
+/* left */
 
 .shop-cart-full__left {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.factor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 2rem;
+  width: 100%;
+}
+
+.factor > :nth-child(1) {
+  font-weight: bold;
+  font-size: large;
+}
+
+.factor > :nth-child(2) {
+  font-weight: bold;
+  font-size: small;
+}
+
+.shop-cart__buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+  color: #fff;
+  border: none;
+  font-size: smaller;
+}
+
+.shop-cart__buttons > button {
+  width: 50%;
+  font-size: small;
+}
+
+/* right */
+
+.shop-cart-full__right {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  width: 65%;
 }
 
 .shop-cart-full__list {
   background-color: #fff;
-  padding: 0 1rem;
+  padding: 0 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shop-list__delete {
+  transform: rotate(45deg);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.shop-list__img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.shop-list__name {
+  width: 15rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.shop-list__count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 2rem;
+  font-weight: bold;
+  font-size: large;
+}
+
+.shop-list__count > :nth-child(1),
+.shop-list__count > :nth-child(3) {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--themeGray);
+  cursor: pointer;
+}
+
+.shop-list__price {
+  width: 8rem;
+  text-align: center;
+}
+
+.shop-list__price > :nth-child(1) {
+  font-weight: bold;
+  font-size: large;
+  color: var(--themeRed);
+  margin-left: 0.5rem;
+}
+
+.shop-list__price > :nth-child(2) {
+  font-weight: bold;
+  font-size: small;
 }
 
 /* ________ shop-cart-full ________ */
