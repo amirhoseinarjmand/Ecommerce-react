@@ -9,7 +9,7 @@ import { BiLogIn } from "react-icons/bi";
 import { BsFillPersonFill } from "react-icons/bs";
 
 export default function Search() {
-  const { cartItems } = useContext(pageContext);
+  const { cartItems, allQtyProduct, showPriceQty } = useContext(pageContext);
 
   window.addEventListener("scroll", function () {
     const search = this.document.querySelector(".Search");
@@ -54,7 +54,7 @@ export default function Search() {
 
         <div className="shop__icon rounded-circle center">
           <Link to="/shopCart" className="center">
-            <span className="badge center">{cartItems.length}</span>
+            <span className="badge center">{allQtyProduct}</span>
 
             <FaShoppingBag size={17} style={{ color: "#000" }} />
           </Link>

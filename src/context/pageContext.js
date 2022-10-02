@@ -8,4 +8,6 @@ export const pageContext = createContext({
   deleteProductFromCartItems: () => {},
   showProductPrice: () => {},
   totalPrice: () => {},
+  showPriceQty: () => {},
+  allQtyProduct: {},
 });

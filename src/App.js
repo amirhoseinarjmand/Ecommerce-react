@@ -17,12 +17,15 @@ const getDatasFromLocalStorage = () => {
 
 function App() {
   const [cartItems, setCartItems] = useState(getDatasFromLocalStorage());
+  const [allQtyProduct, setAllQtyProduct] = useState(0);
 
   // ________________________ ShopCart __________________________
 
   // @desc: save product in LocalStorage
   useEffect(() => {
     localStorage.setItem("product", JSON.stringify(cartItems));
+
+    showPriceQty(cartItems);
   }, [cartItems]);
 
   // @desc: send product's items to shop cart
@@ -75,9 +78,12 @@ function App() {
     setCartItems(filteredCartItems);
   };
 
+  // @desc: sum all of qty of product
   const showPriceQty = (product) => {
-    
-  }
+    const qtyArray = product.map((item) => item.qty);
+
+    setAllQtyProduct(qtyArray.reduce((total, number) => total + number, 0));
+  };
 
   // ________________________ ShopCart __________________________
 
@@ -92,6 +98,8 @@ function App() {
           decreasefromCartItems,
           showProductPrice,
           totalPrice,
+          allQtyProduct,
+          showPriceQty,
         }}
       >
         <Routes>
