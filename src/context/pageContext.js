@@ -10,4 +10,5 @@ export const pageContext = createContext({
   totalPrice: () => {},
   showPriceQty: () => {},
   allQtyProduct: {},
+  alertDeleteAll: () => {},
 });

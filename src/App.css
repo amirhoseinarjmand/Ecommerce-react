@@ -9,6 +9,7 @@
 }
 
 body {
+  position: relative;
   direction: rtl;
 }
 
@@ -35,6 +36,38 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* confirm alert */
+
+.react-confirm-alert-body-element {
+  overflow: visible !important;
+}
+
+.delete-all__confirm {
+  background-color: var(--themeGray);
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 3rem;
+  width: 100%;
+  height: 100%;
+}
+
+.delete-all__confirm > :nth-child(1) {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.alert-btn-container {
+  gap: 1rem;
+}
+
+.alert__no,
+.alert__yes {
+  outline: none;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  color: #fff;
 }
 
 @font-face {

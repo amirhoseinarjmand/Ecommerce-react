@@ -9,7 +9,7 @@ import { BiLogIn } from "react-icons/bi";
 import { BsFillPersonFill } from "react-icons/bs";
 
 export default function Search() {
-  const { cartItems, allQtyProduct, showPriceQty } = useContext(pageContext);
+  const { allQtyProduct } = useContext(pageContext);
 
   window.addEventListener("scroll", function () {
     const search = this.document.querySelector(".Search");

@@ -8,6 +8,8 @@ import { BrowserRouter } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+// confirm alert
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

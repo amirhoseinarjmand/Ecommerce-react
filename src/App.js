@@ -3,6 +3,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { Pages, ShopCart } from "./components";
 import { pageContext } from "./context/pageContext";
+import { confirmAlert } from "react-confirm-alert";
 
 // @desc: get product from LocalStorage
 const getDatasFromLocalStorage = () => {
@@ -86,6 +87,43 @@ function App() {
   };
 
   // ________________________ ShopCart __________________________
+  // ________________________ confirm alert __________________________
+
+  const alertDeleteAll = () => {
+    confirmAlert({
+      customUI: ({ onClose }) => {
+        return (
+          <div
+            className="delete-all__confirm center rounded-2 shadow"
+            dir="rtl"
+          >
+            <span>تمامی محصولات از سبد خرید حذف شوند؟</span>
+
+            <section className="alert-btn-container center">
+              <button
+                onClick={() => {
+                  setCartItems([]);
+                  onClose();
+                }}
+                className="alert__yes bg-success bg-gradient rounded-2 shadow-sm"
+              >
+                بله
+              </button>
+
+              <button
+                onClick={onClose}
+                className="alert__no bg-danger bg-gradient rounded-2 shadow-sm"
+              >
+                خیر
+              </button>
+            </section>
+          </div>
+        );
+      },
+    });
+  };
+
+  // ________________________ confirm alert __________________________
 
   return (
     <div className="App">
@@ -100,6 +138,7 @@ function App() {
           totalPrice,
           allQtyProduct,
           showPriceQty,
+          alertDeleteAll,
         }}
       >
         <Routes>

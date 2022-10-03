@@ -15,6 +15,7 @@ const ShopCart = () => {
     decreasefromCartItems,
     showProductPrice,
     totalPrice,
+    alertDeleteAll,
   } = useContext(pageContext);
 
   return (
@@ -97,7 +98,7 @@ const ShopCart = () => {
                   </button>
                   <button
                     className="btn btn-danger bg-gradient shadow-sm"
-                    onClick={() => setCartItems([])}
+                    onClick={() => alertDeleteAll()}
                   >
                     حذف همه
                   </button>
