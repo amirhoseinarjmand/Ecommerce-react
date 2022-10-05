@@ -1,5 +1,12 @@
 import React from "react";
-import { Home, AmazingDiscount, Header } from "../components";
+import {
+  Home,
+  AmazingDiscount,
+  Header,
+  TopCat,
+  NewArrival,
+  BigDiscount,
+} from "../components";
 
 const Pages = () => {
   return (
@@ -17,6 +24,12 @@ const Pages = () => {
       </section>
 
       <AmazingDiscount />
+
+      <TopCat />
+
+      <NewArrival />
+
+      <BigDiscount />
     </div>
   );
 };

@@ -1,0 +1,28 @@
+.BigDiscount__title {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  padding-right: 12px;
+}
+
+.BigDiscountCart-slide-container {
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.BigDiscountCart-slide__img {
+  width: 10rem;
+}
+
+.BigDiscountCart-slide-container > :nth-child(2) {
+    font-weight: bold;
+}
+
+.BigDiscountCart-slide-container > :nth-child(3) {
+    font-weight: bold;
+    font-size: small;
+    color: var(--themeRed);
+}

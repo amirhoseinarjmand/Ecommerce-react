@@ -6,7 +6,7 @@ import "./AmazingDiscount.css";
 const amazingDiscount = () => {
   return (
     <div className="Amazing-discount container-lg">
-      <div className="title">
+      <div className="Amazing__title">
         <TbDiscount2 style={{ color: "var(--themeRed)" }} /> تخفیفات شگفت انگیز
       </div>
 
