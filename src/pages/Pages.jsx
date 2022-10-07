@@ -14,7 +14,7 @@ const Pages = () => {
   const { dark } = useContext(pageContext);
 
   return (
-    <div className={dark ? "Pages darkMode" : "Pages"} >
+    <div className={`Pages ${dark ? "darkMode" : ""}`}>
       <section
         className="home-container"
         style={{

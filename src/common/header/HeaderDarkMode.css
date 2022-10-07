@@ -1,0 +1,69 @@
+.darkMode {
+  background-color: var(--themeDark) !important;
+}
+
+.darkMode .shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem var(--border) !important;
+}
+
+/* _________________ Header DarkMode _________________ */
+.darkMode .Header,
+.darkMode .search-box > input {
+  background-color: var(--themeDark);
+}
+
+.darkMode .search-box > input,
+.darkMode .search-box > input::placeholder,
+.darkMode .navbar__menu > li > a {
+  color: var(--themeDarkText);
+}
+
+.darkMode .shop__icon,
+.darkMode .DarkMode__icon,
+.darkMode .Categories,
+.darkMode .login {
+  background-color: var(--themeDarkBgLight);
+}
+
+.darkMode .shop__icon:hover,
+.darkMode .login:hover,
+.darkMode .Categories:hover,
+.darkMode .DarkMode__icon:hover {
+  background-color: var(--border);
+}
+
+.darkMode .navbar__menu > li > a:hover {
+  color: var(--themeRed);
+}
+
+.darkMode .categoryMenu {
+  background-color: var(--themeDarkBgLight);
+}
+
+.darkMode .categoryMenu > a > li:hover {
+  background-color: #90a4ae;
+}
+
+.darkMode .categoryMenu > a > li > img {
+  border-radius: 5px;
+  background-color: #e0e0e0;
+}
+
+.darkMode .Search.active {
+  background-color: var(--themeDark);
+  box-shadow: 0 0.125rem 0.25rem var(--border) !important;
+}
+
+/* _________________ Header DarkMode _________________ */
+
+/* _________________ Home DarkMode _________________ */
+
+.darkMode .home-container {
+  background-color: var(--themeDark) !important;
+}
+
+.darkMode .slide-cart__right {
+  color: var(--themeDarkText);
+}
+
+/* _________________ Home DarkMode _________________ */

@@ -29,6 +29,10 @@ body {
   --themeGray: #f6f9fc;
   --themeRed: #e6123d;
   --themeBlue: #0f3460;
+
+  --themeDark: #263238;
+  --themeDarkBgLight: #607d8b;
+  --themeDarkText: #fff;
 }
 
 /* class */

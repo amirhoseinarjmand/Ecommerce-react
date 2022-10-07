@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, json } from "react-router-dom";
 import { Pages, ShopCart } from "./components";
 import { pageContext } from "./context/pageContext";
 import { confirmAlert } from "react-confirm-alert";
@@ -19,8 +19,30 @@ const getDatasFromLocalStorage = () => {
 function App() {
   const [cartItems, setCartItems] = useState(getDatasFromLocalStorage());
   const [allQtyProduct, setAllQtyProduct] = useState(0);
-  const [dark, setDark] = useState(false);
 
+  // ________________________ ThemeDark __________________________
+
+  const getTheme = () => {
+    const initialTheme = localStorage.getItem("theme");
+
+    if (initialTheme === null) {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      return localStorage.getItem("theme");
+    }
+  };
+
+  const [dark, setDark] = useState(getTheme());
+
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(dark));
+  }, [dark]);
+
+  // ________________________ ThemeDark __________________________
   // ________________________ ShopCart __________________________
 
   // @desc: save product in LocalStorage

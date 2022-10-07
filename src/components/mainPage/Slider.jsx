@@ -3,7 +3,6 @@ import Datas from "./mainPageData";
 import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { HiArrowNarrowLeft } from "react-icons/hi";
-
 import "./Home.css";
 
 const Slider = () => {

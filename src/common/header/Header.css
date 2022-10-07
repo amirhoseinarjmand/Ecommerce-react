@@ -154,8 +154,6 @@
   border: 2px solid var(--border);
 }
 
-/* Dark Mode */
-
 .DarkMode__icon {
   position: relative;
   background-color: var(--themeGray);
