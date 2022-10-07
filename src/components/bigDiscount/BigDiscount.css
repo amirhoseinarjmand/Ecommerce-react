@@ -1,3 +1,7 @@
+.BigDiscountCart .swiper {
+  display: grid;
+}
+
 .BigDiscount__title {
   font-weight: bolder;
   font-size: 1.5rem;
@@ -13,16 +17,13 @@
   flex-direction: column;
 }
 
-.BigDiscountCart-slide__img {
-  width: 10rem;
-}
-
 .BigDiscountCart-slide-container > :nth-child(2) {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .BigDiscountCart-slide-container > :nth-child(3) {
-    font-weight: bold;
-    font-size: small;
-    color: var(--themeRed);
+  font-weight: bold;
+  font-size: small;
+  color: var(--themeRed);
 }
+

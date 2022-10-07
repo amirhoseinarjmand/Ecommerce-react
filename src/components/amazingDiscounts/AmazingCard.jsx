@@ -10,7 +10,7 @@ import { HiPlus, HiOutlineHeart } from "react-icons/hi";
 
 const AmazingCard = () => {
   const [heartCount, setHeartCount] = useState(0);
-  const { addToCartItems } = useContext(pageContext);
+  const { addToCartItems, formatNumber } = useContext(pageContext);
 
   const addHeart = () => {
     return setHeartCount(heartCount + 1);
@@ -64,7 +64,7 @@ const AmazingCard = () => {
                   }
                 </span>
 
-                <span>{`${price}.000 تومان`}</span>
+                <span>{`${formatNumber(price)} تومان`}</span>
 
                 <button
                   className="card__add center rounded-2"

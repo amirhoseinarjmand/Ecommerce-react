@@ -19,6 +19,7 @@ const getDatasFromLocalStorage = () => {
 function App() {
   const [cartItems, setCartItems] = useState(getDatasFromLocalStorage());
   const [allQtyProduct, setAllQtyProduct] = useState(0);
+  const [dark, setDark] = useState(false);
 
   // ________________________ ShopCart __________________________
 
@@ -87,6 +88,7 @@ function App() {
   };
 
   // ________________________ ShopCart __________________________
+
   // ________________________ confirm alert __________________________
 
   const alertDeleteAll = () => {
@@ -125,6 +127,14 @@ function App() {
 
   // ________________________ confirm alert __________________________
 
+  //  ________________________ Format Number __________________________
+
+  function formatNumber(num) {
+    return Number(num.toFixed(3)).toLocaleString();
+  }
+
+  //  ________________________ Format Number __________________________
+
   return (
     <div className="App">
       <pageContext.Provider
@@ -139,6 +149,9 @@ function App() {
           allQtyProduct,
           showPriceQty,
           alertDeleteAll,
+          formatNumber,
+          dark,
+          setDark,
         }}
       >
         <Routes>

@@ -10,12 +10,12 @@ const ShopCart = () => {
   const {
     cartItems,
     deleteProductFromCartItems,
-    setCartItems,
     addToCartItems,
     decreasefromCartItems,
     showProductPrice,
     totalPrice,
     alertDeleteAll,
+    formatNumber,
   } = useContext(pageContext);
 
   return (
@@ -66,7 +66,7 @@ const ShopCart = () => {
                     </span>
 
                     <span className="shop-list__price">
-                      <span>{`${showProductPrice(item)}.000`}</span>
+                      <span> {formatNumber(showProductPrice(item))} </span>
                       <span>تومان</span>
                     </span>
                   </div>
@@ -86,7 +86,7 @@ const ShopCart = () => {
                         marginLeft: 5,
                       }}
                     >
-                      {`${totalPrice}.000`}
+                      {formatNumber(totalPrice)}
                     </span>{" "}
                     تومان
                   </span>

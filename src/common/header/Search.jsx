@@ -3,13 +3,14 @@ import { useContext } from "react";
 import { pageContext } from "../../context/pageContext";
 import Logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
-import { HiOutlineSearch } from "react-icons/hi";
+import { HiOutlineSearch, HiSun } from "react-icons/hi";
 import { FaShoppingBag } from "react-icons/fa";
 import { BiLogIn } from "react-icons/bi";
 import { BsFillPersonFill } from "react-icons/bs";
+import { RiMoonClearFill } from "react-icons/ri";
 
 export default function Search() {
-  const { allQtyProduct } = useContext(pageContext);
+  const { allQtyProduct, dark, setDark } = useContext(pageContext);
 
   window.addEventListener("scroll", function () {
     const search = this.document.querySelector(".Search");
@@ -58,6 +59,10 @@ export default function Search() {
 
             <FaShoppingBag size={17} style={{ color: "#000" }} />
           </Link>
+        </div>
+
+        <div className="DarkMode__icon center" onClick={() => setDark(!dark)}>
+          {!dark ? <RiMoonClearFill size={20} /> : <HiSun size={25} />}
         </div>
       </section>
     </div>

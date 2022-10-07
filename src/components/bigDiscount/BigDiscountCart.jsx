@@ -2,8 +2,13 @@ import React from "react";
 import Datas from "./BigD";
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useContext } from "react";
+import { pageContext } from "../../context/pageContext";
+// import FormatNumber from "../../formatNumber";
 
 const BigDiscountCart = () => {
+  const { formatNumber } = useContext(pageContext)
+
   return (
     <Swiper
       slidesPerView={6}
@@ -25,13 +30,13 @@ const BigDiscountCart = () => {
           <SwiperSlide key={index} style={{ padding: "1rem" }}>
             <article className="BigDiscountCart-slide-container rounded-2 shadow-sm">
               <img
-                className="BigDiscountCart-slide__img"
+                className="BigDiscountCart-slide__img img-fluid"
                 style={{ alignSelf: "center" }}
                 src={img}
                 alt=""
               />
               <span> {name} </span>
-              <span> {price} </span>
+              <span> {formatNumber(price)} </span>
             </article>
           </SwiperSlide>
         );

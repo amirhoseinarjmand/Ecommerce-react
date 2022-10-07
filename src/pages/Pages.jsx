@@ -1,4 +1,5 @@
 import React from "react";
+import { useContext } from "react";
 import {
   Home,
   AmazingDiscount,
@@ -7,10 +8,13 @@ import {
   NewArrival,
   BigDiscount,
 } from "../components";
+import { pageContext } from "../context/pageContext";
 
 const Pages = () => {
+  const { dark } = useContext(pageContext);
+
   return (
-    <div className="Pages">
+    <div className={dark ? "Pages darkMode" : "Pages"} >
       <section
         className="home-container"
         style={{

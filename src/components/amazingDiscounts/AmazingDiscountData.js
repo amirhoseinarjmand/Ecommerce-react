@@ -4,7 +4,7 @@ const amazingDatas = [
     discount: 50,
     img: require("../../assets/images/flash/flash-1.png"),
     name: "Shoes",
-    price: 100.0,
+    price: 100000,
     qty: 0,
   },
   {
@@ -12,7 +12,7 @@ const amazingDatas = [
     discount: 40,
     img: require("../../assets/images/flash/flash-2.png"),
     name: "Watch",
-    price: 300.0,
+    price: 300000,
     qty: 0,
   },
   {
@@ -20,7 +20,7 @@ const amazingDatas = [
     discount: 40,
     img: require("../../assets/images/flash/flash-3.png"),
     name: "Smart Mobile Black",
-    price: 200.0,
+    price: 200000,
     qty: 0,
   },
   {
@@ -28,7 +28,7 @@ const amazingDatas = [
     discount: 40,
     img: require("../../assets/images/flash/flash-4.png"),
     name: "Smart Watch Black",
-    price: 500.0,
+    price: 500000,
     qty: 0,
   },
   {
@@ -36,7 +36,7 @@ const amazingDatas = [
     discount: 50,
     img: require("../../assets/images/flash/flash-1.png"),
     name: "Shoes",
-    price: 100.0,
+    price: 100000,
     qty: 0,
   },
   {
@@ -44,7 +44,7 @@ const amazingDatas = [
     discount: 50,
     img: require("../../assets/images/flash/flash-3.png"),
     name: "Shoes",
-    price: 100.0,
+    price: 100000,
     qty: 0,
   },
   {
@@ -52,7 +52,7 @@ const amazingDatas = [
     discount: 50,
     img: require("../../assets/images/flash/flash-1.png"),
     name: "Shoes",
-    price: 100.0,
+    price: 100000,
     qty: 0,
   },
   {
@@ -60,7 +60,7 @@ const amazingDatas = [
     discount: 40,
     img: require("../../assets/images/flash/flash-2.png"),
     name: "Watch",
-    price: 20.0,
+    price: 20000,
     qty: 0,
   },
   {
@@ -68,7 +68,7 @@ const amazingDatas = [
     discount: 40,
     img: require("../../assets/images/flash/flash-3.png"),
     name: "Smart Mobile Black",
-    price: 200.0,
+    price: 200000,
     qty: 0,
   },
 ];

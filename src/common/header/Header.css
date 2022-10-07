@@ -1,7 +1,48 @@
 .Header {
+  width: 100%;
   margin-bottom: 0.5rem;
   background-color: #fff;
 }
+
+/* ------------ Head ------------ */
+
+.Header-head {
+  position: relative;
+}
+
+.Header-head > img {
+  width: 100%;
+}
+
+.Header-head .swiper-button-prev,
+.Header-head .swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  color: #000;
+  background-color: #fff;
+  top: 2.1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.Header-head .swiper-button-prev {
+  left: 10rem;
+}
+
+.Header-head .swiper-button-next {
+  right: 10rem;
+}
+
+.Header-head .swiper-button-prev::after,
+.Header-head .swiper-button-next::after {
+  font-size: 0.7rem;
+  font-weight: bolder;
+}
+
+/* ------------ Head ------------ */
 
 /* ------------ Navbr ------------ */
 
@@ -111,6 +152,17 @@
   height: 3rem;
   padding: 0 1rem;
   border: 2px solid var(--border);
+}
+
+/* Dark Mode */
+
+.DarkMode__icon {
+  position: relative;
+  background-color: var(--themeGray);
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  border-radius: 50%;
 }
 
 .search-box__icon {
