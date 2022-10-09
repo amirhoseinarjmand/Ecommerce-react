@@ -1,0 +1,92 @@
+.Brands {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 0;
+  gap: 2rem;
+}
+
+/* ________________ right __________________ */
+
+.brands-right {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.brands-right__card {
+  position: relative;
+  padding: 1rem;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.brands-right__card > img {
+  width: 7rem;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+.brands-right__card > :nth-child(3) {
+  color: var(--themeRed);
+}
+
+.brands-right__card > :nth-child(4) {
+  font-weight: bolder;
+}
+
+.brands-right__card > :nth-child(5) {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  width: 2.3rem;
+  height: 2.3rem;
+  background-color: #fff;
+  border: 1px solid var(--border);
+  color: var(--themeRed);
+  transition: 0.3s;
+}
+
+.brands-right__card > :nth-child(5):hover {
+  background-color: var(--themeRed);
+  color: #fff;
+}
+
+/* ________________ right __________________ */
+
+/* ________________ left __________________ */
+
+.brands-left {
+  width: 20%;
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.brand-left__btn {
+  padding: 0.5rem;
+  align-items: center;
+  background-color: var(--themeGray);
+  outline: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.brand-left__btn:hover {
+  background-color: #fff;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* ________________ left __________________ */

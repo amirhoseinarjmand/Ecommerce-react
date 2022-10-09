@@ -7,6 +7,7 @@ import {
   TopCat,
   NewArrival,
   BigDiscount,
+  Brands,
 } from "../components";
 import { pageContext } from "../context/pageContext";
 
@@ -14,7 +15,7 @@ const Pages = () => {
   const { dark } = useContext(pageContext);
 
   return (
-    <div className={`Pages ${dark ? "darkMode" : ""}`}>
+    <div className={`Pages ${dark ? " darkMode" : ""}`}>
       <section
         className="home-container"
         style={{
@@ -34,6 +35,8 @@ const Pages = () => {
       <NewArrival />
 
       <BigDiscount />
+
+      <Brands />
     </div>
   );
 };

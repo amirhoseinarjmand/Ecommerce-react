@@ -6,3 +6,4 @@ export { default as Pages } from "../pages/Pages";
 export { default as TopCat } from "./top/TopCat";
 export { default as NewArrival } from "./new/NewArrival";
 export { default as BigDiscount } from "./bigDiscount/BigDiscount";
+export { default as Brands } from "./brands/Brands";

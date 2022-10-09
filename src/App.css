@@ -33,6 +33,7 @@ body {
   --themeDark: #263238;
   --themeDarkBgLight: #607d8b;
   --themeDarkText: #fff;
+  --themeDarkSliderText: #ffba07;
 }
 
 /* class */
@@ -56,6 +57,10 @@ body {
   padding: 2rem 3rem;
   width: 100%;
   height: 100%;
+}
+
+.darkMode.delete-all__confirm {
+  background-color: var(--themeDarkBgLight) !important;
 }
 
 .delete-all__confirm > :nth-child(1) {

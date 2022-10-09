@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { Routes, Route, json } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Pages, ShopCart } from "./components";
 import { pageContext } from "./context/pageContext";
 import { confirmAlert } from "react-confirm-alert";
@@ -22,6 +22,7 @@ function App() {
 
   // ________________________ ThemeDark __________________________
 
+  // @desc: get Theme from LocalStorage
   const getTheme = () => {
     const initialTheme = localStorage.getItem("theme");
 
@@ -32,7 +33,7 @@ function App() {
         return false;
       }
     } else {
-      return localStorage.getItem("theme");
+      return JSON.parse(localStorage.getItem("theme"));
     }
   };
 
@@ -118,7 +119,9 @@ function App() {
       customUI: ({ onClose }) => {
         return (
           <div
-            className="delete-all__confirm center rounded-2 shadow"
+            className={`delete-all__confirm center rounded-2 shadow ${
+              dark ? "darkMode" : ""
+            }`}
             dir="rtl"
           >
             <span>تمامی محصولات از سبد خرید حذف شوند؟</span>

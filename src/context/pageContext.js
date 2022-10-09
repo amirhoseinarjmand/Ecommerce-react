@@ -12,6 +12,6 @@ export const pageContext = createContext({
   allQtyProduct: {},
   alertDeleteAll: () => {},
   formatNumber: () => {},
-  dark: false,
+  dark: "",
   setDark: () => {},
 });

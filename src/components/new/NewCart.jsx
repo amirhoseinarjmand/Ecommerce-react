@@ -9,7 +9,7 @@ const NewCart = () => {
 
   return (
     <div className="new-cart-container rounded-2 shadow-sm">
-      <div className="new-cart-slide">
+      <div className="new-cart-slide rounded-2">
         {Datas.map((item, index) => {
           return (
             <article key={index} className="new-cart-slide-container">

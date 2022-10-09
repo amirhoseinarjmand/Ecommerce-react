@@ -16,11 +16,12 @@ const ShopCart = () => {
     totalPrice,
     alertDeleteAll,
     formatNumber,
+    dark,
   } = useContext(pageContext);
 
   return (
     <>
-      <div className="shop-cart center">
+      <div className={`shop-cart center ${dark ? "darkMode" : ""}`}>
         <Header />
 
         <section className="shop-cart__body container">

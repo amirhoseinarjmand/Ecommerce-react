@@ -1,4 +1,5 @@
 .darkMode {
+  transition: 0.3s;
   background-color: var(--themeDark) !important;
 }
 
@@ -6,9 +7,36 @@
   box-shadow: 0 0.125rem 0.25rem var(--border) !important;
 }
 
+/* _________________ Shop Cart _________________ */
+
+.darkMode .shop-cart-empty {
+  transition: 0.3s;
+  background-color: var(--themeDark);
+}
+
+.darkMode .shop-cart-empty-text {
+  background-color: var(--themeDarkBgLight);
+  color: #000;
+  box-shadow: 0 0 1rem 0.25rem var(--border) !important;
+}
+
+.darkMode .shop-cart-full__list,
+.darkMode .factor {
+  transition: 0.3s;
+  background-color: var(--themeDarkBgLight);
+}
+
+.darkMode .shop-list__count > span:not(:nth-child(2)) {
+  background-color: #bdbdbd;
+}
+
+/* _________________ Shop Cart _________________ */
+
 /* _________________ Header DarkMode _________________ */
+
 .darkMode .Header,
 .darkMode .search-box > input {
+  transition: 0.3s;
   background-color: var(--themeDark);
 }
 
@@ -59,6 +87,7 @@
 /* _________________ Home DarkMode _________________ */
 
 .darkMode .home-container {
+  transition: 0.3s;
   background-color: var(--themeDark) !important;
 }
 
@@ -66,4 +95,97 @@
   color: var(--themeDarkText);
 }
 
+.darkMode .slider .swiper .swiper-pagination-bullet {
+  background-color: var(--themeDarkText);
+}
+
 /* _________________ Home DarkMode _________________ */
+
+/* _________________ Amazing Discount _________________ */
+
+.darkMode .Amazing__title {
+  color: var(--themeDarkText);
+}
+
+.darkMode .card-container {
+  background-color: var(--themeDarkBgLight);
+}
+
+.darkMode .card-container-body > :nth-child(1) {
+  color: var(--themeDarkSliderText) !important;
+}
+
+.darkMode .card-container-body > button {
+  background-color: #bdbdbd;
+}
+
+/* _________________ Amazing Discount _________________ */
+
+/* _________________ TopCat _________________ */
+
+.darkMode .Top__title {
+  color: var(--themeDarkText);
+}
+
+.darkMode .TopCart-slider__container {
+  background-color: var(--themeDarkBgLight);
+}
+
+/* _________________ TopCat _________________ */
+
+/* _________________ new-cart-container  _________________ */
+
+.darkMode .new-cart-slide {
+  background-color: var(--themeDarkBgLight);
+}
+
+.darkMode .new-cart-slide-container > :nth-child(2) {
+  color: var(--themeDarkSliderText);
+}
+
+/* _________________ new-cart-container  _________________ */
+
+/* _________________ BigDiscount _________________ */
+
+.darkMode .BigDiscount__title {
+  color: var(--themeDarkText);
+}
+
+.darkMode .BigDiscountCart-slide-container {
+  background-color: var(--themeDarkBgLight);
+}
+
+.darkMode .BigDiscountCart-slide-container > :nth-child(2) {
+  color: var(--themeDarkSliderText);
+}
+
+/* _________________ BigDiscount _________________ */
+
+/* _________________ Brands _________________ */
+
+.darkMode .brands-right__card {
+  background-color: var(--themeDarkBgLight);
+}
+
+.darkMode .brands-right__card > :nth-child(2) {
+  color: var(--themeDarkSliderText) !important;
+}
+
+.darkMode .brands-right__card > :nth-child(5) {
+  background-color: #bdbdbd;
+}
+
+.darkMode .brands-left {
+  background-color: var(--themeDarkBgLight);
+}
+
+.darkMode .brand-left__btn {
+  border: 1px solid rgba(255, 255, 255, 0.365);
+  background-color: transparent;
+}
+
+.darkMode .brand-left__btn:hover {
+  background-color: gray;
+}
+
+/* _________________ Brands _________________ */
