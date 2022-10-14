@@ -8,6 +8,7 @@ import {
   NewArrival,
   BigDiscount,
   Brands,
+  Footer,
 } from "../components";
 import { pageContext } from "../context/pageContext";
 
@@ -37,6 +38,8 @@ const Pages = () => {
       <BigDiscount />
 
       <Brands />
+
+      <Footer />
     </div>
   );
 };

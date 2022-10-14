@@ -49,14 +49,16 @@
 .darkMode .shop__icon,
 .darkMode .DarkMode__icon,
 .darkMode .Categories,
-.darkMode .login {
+.darkMode .login,
+.darkMode .login__person-icon {
   background-color: var(--themeDarkBgLight);
 }
 
 .darkMode .shop__icon:hover,
 .darkMode .login:hover,
 .darkMode .Categories:hover,
-.darkMode .DarkMode__icon:hover {
+.darkMode .DarkMode__icon:hover,
+.darkMode .login__person-icon:hover {
   background-color: var(--border);
 }
 

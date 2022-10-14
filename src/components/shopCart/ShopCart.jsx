@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { pageContext } from "../../context/pageContext";
-import { Header } from "../../components";
+import { Header, Footer } from "../../components";
 import { GoPlus } from "react-icons/go";
 import { ImMinus } from "react-icons/im";
 import "./ShopCart.css";
@@ -108,6 +108,8 @@ const ShopCart = () => {
             </section>
           )}
         </section>
+
+        <Footer />
       </div>
     </>
   );

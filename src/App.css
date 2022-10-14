@@ -18,7 +18,7 @@ body {
 .Pages {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 2.5rem;
   background-color: var(--themeGray);
 }
 
@@ -78,6 +78,24 @@ body {
   border: none;
   padding: 0.5rem 1.5rem;
   color: #fff;
+}
+
+/* scroll */
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: rgb(240, 210, 215);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: var(--themeRed);
+  border-radius: 1rem;
 }
 
 @font-face {

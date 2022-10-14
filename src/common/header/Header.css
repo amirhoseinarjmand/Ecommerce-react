@@ -200,6 +200,7 @@
   width: 3rem;
   height: 3rem;
   cursor: pointer;
+  margin-right: 1rem;
 }
 
 .shop__icon {
@@ -225,13 +226,13 @@
 
 @media (max-width: 576px) {
   .login {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: 576px) {
   .login__person-icon {
-    display: none;
+    display: none !important;
   }
 }
 

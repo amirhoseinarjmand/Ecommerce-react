@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { Pages, ShopCart } from "./components";
 import { pageContext } from "./context/pageContext";
 import { confirmAlert } from "react-confirm-alert";
+import "./App.css";
+import "./common/DarkMode.css";
 
 // @desc: get product from LocalStorage
 const getDatasFromLocalStorage = () => {
@@ -183,8 +184,6 @@ function App() {
           <Route path="/" element={<Pages />} />
           <Route path="/shopCart" element={<ShopCart />} />
         </Routes>
-
-        <div style={{ height: "200rem" }}></div>
       </pageContext.Provider>
     </div>
   );

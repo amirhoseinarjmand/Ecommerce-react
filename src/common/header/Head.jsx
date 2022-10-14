@@ -1,4 +1,3 @@
-import "./Header.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
 import { useLocation } from "react-router-dom";
