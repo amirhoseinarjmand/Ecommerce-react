@@ -14,9 +14,9 @@
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  cursor: pointer;
 }
 
-.Footer > :nth-child(1) {
-  cursor: default;
+.Footer > :nth-child(2) > span,
+.Footer > :nth-child(3) > span {
+  cursor: pointer;
 }

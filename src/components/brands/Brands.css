@@ -90,3 +90,85 @@
 }
 
 /* ________________ left __________________ */
+
+@media (max-width: 1400px) {
+  .brands-right__card {
+    align-items: center;
+  }
+
+  .brands-right__card > :nth-child(5) {
+    position: unset;
+    margin-top: 1rem;
+    width: 80%;
+    align-self: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .brands-right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .brands-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brand-left__btn {
+    font-size: smaller;
+  }
+}
+
+@media (max-width: 576px) {
+  .brands-right__card {
+    padding: 1rem 2rem;
+    align-items: flex-end;
+  }
+
+  .brands-right__card > :nth-child(5) {
+    position: absolute;
+    margin-top: 0;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: 2.3rem;
+  }
+
+  .brands-right {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .brands-left {
+    width: 40%;
+  }
+}
+
+@media (max-width: 455px) {
+  .brands-right__card {
+    align-items: center;
+  }
+
+  .brands-right__card > :nth-child(5) {
+    position: unset;
+    margin-top: 1rem;
+    width: 80%;
+    align-self: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .Brands {
+    flex-direction: column-reverse;
+  }
+
+  .brands-left,
+  .brands-right {
+    width: 80%;
+    align-self: center;
+    font-size: large;
+  }
+}

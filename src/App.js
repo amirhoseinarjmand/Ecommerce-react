@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import { Pages, ShopCart } from "./components";
+import { Pages, ShopCart , Error404} from "./components";
 import { pageContext } from "./context/pageContext";
 import { confirmAlert } from "react-confirm-alert";
 import "./App.css";
@@ -183,6 +183,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Pages />} />
           <Route path="/shopCart" element={<ShopCart />} />
+          <Route path="*" element={<Error404 />} />
         </Routes>
       </pageContext.Provider>
     </div>
