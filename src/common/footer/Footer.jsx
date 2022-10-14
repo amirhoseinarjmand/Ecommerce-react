@@ -1,60 +1,70 @@
 import React from "react";
+import { FiInstagram } from "react-icons/fi";
 import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="Footer bg-gradient bg-dark">
-      <section className="">
-        <span
-          style={{
-            cursor: "default",
-            fontWeight: "bolder",
-            fontSize: "1.4rem",
-            color: "var(--themeRed)",
-          }}
-        >
-          راه های ارتباطی
-        </span>
-        <span>تلفن پشتیبانی: 1536</span>
-        <span>
-          آدرس: خیابان احمد قصیر (بخارست)، خیابان پانزدهم غربی (احمدیان)، پلاک
-          11، طبقه 3
-        </span>
-        <span>ایمیل: info@okala.com</span>
-      </section>
+    <div className="Footer shadow-sm">
+      <section className="footer__top">
+        <span>راه های ارتباطی</span>
 
-      <section className="">
-        <span
-          style={{
-            cursor: "default",
-            fontWeight: "bolder",
-            fontSize: "1.4rem",
-            color: "var(--themeRed)",
-          }}
-        >
-          فروشگاه
-        </span>
+        <span>فروشگاه</span>
+
         <span>بلاگ</span>
-        <span>درباره فروشگاه</span>
-        <span>تماس با فروشگاه</span>
-        <span>رنک فروشگاه</span>
+
+        <span>
+          <span>
+            <FiInstagram size={20} style={{ marginLeft: 5 }} />
+          </span>
+          <span>اینستاگرام</span>
+        </span>
       </section>
 
-      <section className="">
-        <span
-          style={{
-            cursor: "default",
-            fontWeight: "bolder",
-            fontSize: "1.4rem",
-            color: "var(--themeRed)",
-          }}
-        >
-          خدمات مشتریان
+      <section className="footer__bottom">
+        <span>
+          <span>تلفن پشتیبانی: 1536</span>
+          <span>آدرس: خیابان احمد قصیر طبقه 3</span>
+          <span>ایمیل: info@okala.com</span>
         </span>
-        <span>حمل و نقل</span>
-        <span>سوالات متداول</span>
-        <span>شرایط مرجوعی کالا</span>
-        <span>حریم خصوصی</span>
+
+        <span>
+          <span>درباره فروشگاه</span>
+          <span>تماس با فروشگاه</span>
+          <span>رنک فروشگاه</span>
+        </span>
+
+        <span>
+          <span>خدمات مشتریان</span>
+          <span>حمل و نقل</span>
+          <span>سوالات متداول</span>
+        </span>
+
+        <div className="footer__img">
+          <img
+            src={require("../../assets/images/footer/arrivals1.png")}
+            alt=""
+          />
+          <img
+            src={require("../../assets/images/footer/arrivals2.png")}
+            alt=""
+          />
+          <img
+            src={require("../../assets/images/footer/arrivals5.png")}
+            alt=""
+          />
+          <img
+            src={require("../../assets/images/footer/arrivals6.png")}
+            alt=""
+          />
+          <img
+            src={require("../../assets/images/footer/arrivals3.png")}
+            alt=""
+          />
+          <img
+            src={require("../../assets/images/footer/arrivals4.png")}
+            alt=""
+          />
+        </div>
       </section>
     </div>
   );
