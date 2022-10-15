@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Error404.css";
 
 const Error404 = () => {
@@ -25,12 +24,12 @@ const Error404 = () => {
         <span> آدرس مورد نظر یافت نشد!!! </span>
       </section>
 
-      <Link
-        to="/"
+      <a
+        href="/"
         className="Error404-btnBack btn btn-warning btn-gradient shadow"
       >
         بازگشت به خانه
-      </Link>
+      </a>
     </div>
   );
 };
