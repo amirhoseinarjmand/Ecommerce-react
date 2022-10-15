@@ -14,6 +14,10 @@ const Register = () => {
 
   return (
     <div className="Register center">
+      <Link to="/" className="register-backHome btn btn-warning">
+        بازگشت به خانه
+      </Link>
+
       <div className="register-form center">
         <span>ثبت نام</span>
 

@@ -14,6 +14,10 @@ const Login = () => {
 
   return (
     <div className="Login center">
+      <Link to="/" className="login-backHome btn btn-warning">
+        بازگشت به خانه
+      </Link>
+
       <div className="login-form center">
         <span>ورود</span>
 
