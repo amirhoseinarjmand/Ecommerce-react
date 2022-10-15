@@ -2,6 +2,7 @@
   width: 100%;
   margin-bottom: 0.5rem;
   background-color: #fff;
+  min-width: 300px;
 }
 
 /* ------------ Head ------------ */
@@ -121,6 +122,18 @@
   margin: 0.5rem;
 }
 
+@media (max-width: 992px) {
+  .navbar__menu > li > a {
+    font-size: small;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar__menu {
+    gap: 0.7rem;
+  }
+}
+
 @media (min-width: 576px) {
   .header__bar {
     display: none;
@@ -224,15 +237,31 @@
   font-size: 200;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
+  .login > a :nth-child(2) {
+    font-size: small;
+  }
+
+  .login > a :nth-child(1) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
   .login {
     display: none !important;
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .login__person-icon {
     display: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .Search > :nth-child(1) {
+    display: none;
   }
 }
 
@@ -246,6 +275,30 @@
   padding: 10px 5rem;
   z-index: 1000;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  min-width: 300px;
+}
+
+.Search.active .login__person-icon,
+.Search.active .login {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .Search.active {
+    padding: 10px 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .Search.active .search-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .Search.active .DarkMode__icon {
+    display: none;
+  }
 }
 
 /* ------------ Search ------------ */
@@ -300,6 +353,12 @@
   .categoryMenu {
     left: 0;
     width: 150%;
+  }
+}
+
+@media (max-width: 300px) {
+  .left {
+    display: none;
   }
 }
 

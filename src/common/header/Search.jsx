@@ -26,7 +26,7 @@ export default function Search() {
   return (
     <div className="Search container-lg">
       <Link to="/">
-        <img src={Logo} alt="" />
+        <img src={Logo} alt="" style={{ marginLeft: 10 }} />
       </Link>
 
       <section className="search-box rounded-5">
