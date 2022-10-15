@@ -7,7 +7,7 @@ import { pageContext } from "../../context/pageContext";
 // import FormatNumber from "../../formatNumber";
 
 const BigDiscountCart = () => {
-  const { formatNumber } = useContext(pageContext)
+  const { formatNumber } = useContext(pageContext);
 
   return (
     <Swiper
@@ -19,6 +19,23 @@ const BigDiscountCart = () => {
       autoplay={{
         delay: 3000,
         disableOnInteraction: false,
+      }}
+      breakpoints={{
+        0: {
+          slidesPerView: 1,
+        },
+        360: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
+        1200: {
+          slidesPerView: 6,
+          spaceBetween: 10,
+        },
       }}
       modules={[Autoplay]}
       className="BigDiscountCart"
