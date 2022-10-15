@@ -7,7 +7,8 @@
   color: #fff;
 }
 
-.login-form {
+.login-form,
+.register-form {
   flex-direction: column;
   gap: 1rem;
   width: 20rem;
@@ -20,7 +21,10 @@
 }
 
 .login-userName,
-.login-password {
+.login-password,
+.register-userName,
+.register-password,
+.register-password-repeat {
   outline: none;
   border: none;
   width: 100%;
@@ -31,12 +35,20 @@
   background-color: #dfa3a382;
 }
 
+.register-password-repeat {
+  margin-top: 1rem;
+}
+
 .login-userName::placeholder,
-.login-password::placeholder {
+.login-password::placeholder,
+.register-userName::placeholder,
+.register-password::placeholder,
+.register-password-repeat::placeholder {
   color: #fff;
 }
 
-.login-password-container {
+.login-password-container,
+.register-password-container {
   position: relative;
   width: 100%;
 }
@@ -49,7 +61,16 @@
   color: #fff;
 }
 
-.login-form-body {
+.register-eye {
+  position: absolute;
+  left: 1.3rem;
+  top: 12%;
+  cursor: pointer;
+  color: #fff;
+}
+
+.login-form-body,
+.register-form-body {
   width: 100%;
   display: flex;
   align-items: center;
@@ -58,12 +79,19 @@
 }
 
 .login-form-body > a,
-.login-form-body > a:hover {
+.login-form-body > a:hover,
+.register-form-body > a,
+.register-form-body > a:hover {
   text-decoration: none;
   color: #fff;
 }
 
-.login-btn {
+.register-form-body > a {
+  font-size: small;
+}
+
+.login-btn,
+.register-btn {
   margin-top: 0.5rem;
   border-radius: 2rem;
   width: 35%;
@@ -71,4 +99,10 @@
   padding: 1rem;
   text-align: center;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover,
+.register-btn:hover {
+  transform: scale(1.05);
 }
