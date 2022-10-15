@@ -24,6 +24,19 @@ const AmazingCard = () => {
       loop={true}
       loopFillGroupWithBlank={true}
       navigation={true}
+      breakpoints={{
+        0: {
+          slidesPerView: 1,
+        },
+        400: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        700: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
+      }}
       modules={[Navigation]}
       className="AmazingCard"
     >
@@ -55,11 +68,21 @@ const AmazingCard = () => {
                 <span>
                   {
                     <>
-                      <AiFillStar size={20} />
-                      <AiFillStar size={20} />
-                      <AiFillStar size={20} />
-                      <AiFillStar size={20} />
-                      <AiFillStar size={20} />
+                      <AiFillStar
+                        size={`${window.innerWidth < 700 ? 10 : 20}`}
+                      />
+                      <AiFillStar
+                        size={`${window.innerWidth < 700 ? 10 : 20}`}
+                      />
+                      <AiFillStar
+                        size={`${window.innerWidth < 700 ? 10 : 20}`}
+                      />
+                      <AiFillStar
+                        size={`${window.innerWidth < 700 ? 10 : 20}`}
+                      />
+                      <AiFillStar
+                        size={`${window.innerWidth < 700 ? 10 : 20}`}
+                      />
                     </>
                   }
                 </span>

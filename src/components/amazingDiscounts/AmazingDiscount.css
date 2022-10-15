@@ -72,7 +72,7 @@
   font-weight: bold;
 }
 
-.card-container-body > button {
+.card-container-body > .card__add {
   position: absolute;
   bottom: 1.5rem;
   right: 1.5rem;
@@ -85,7 +85,7 @@
   transition: 0.3s;
 }
 
-.card-container-body > button:hover {
+.card-container-body > .card__add:hover {
   background-color: var(--themeRed);
   color: #fff;
 }
@@ -113,3 +113,45 @@
 }
 
 /* ___________ amazing discount ___________ */
+
+@media (max-width: 992px) {
+  .card-container > :nth-child(3) {
+    width: 15rem;
+  }
+
+  .card-container-body {
+    padding: 0.5rem;
+    align-items: center;
+  }
+
+  .card-container-body > :nth-child(1) {
+    font-size: small;
+  }
+
+  .card__add {
+    position: unset !important;
+    margin-top: 1rem;
+    width: 80% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    height: 20rem;
+  }
+
+  .card-container > :nth-child(3) {
+    width: 10rem;
+    margin: 0.2rem 0;
+  }
+
+  .card-container-body > :nth-child(3) {
+    font-size: small;
+  }
+}
+
+@media (max-width: 700px) {
+  .card-container-body > :nth-child(2) > * {
+    font-size: small;
+  }
+}
