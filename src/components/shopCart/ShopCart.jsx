@@ -21,10 +21,14 @@ const ShopCart = () => {
 
   return (
     <>
-      <div className={`${cartItems.length < 2 ? "shop-cart-height" : "shop-cart"} center ${dark ? "darkMode" : ""}`}>
+      <div
+        className={`${
+          cartItems.length < 2 ? "shop-cart-height" : "shop-cart"
+        } center ${dark ? "darkMode" : ""}`}
+      >
         <Header />
 
-        <section className="shop-cart__body container">
+        <section className="shop-cart__body container-xl">
           {cartItems.length === 0 ? (
             <section className="shop-cart-empty">
               <div className="shop-cart-empty-text rounded-2 shadow">
