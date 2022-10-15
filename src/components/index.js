@@ -9,3 +9,5 @@ export { default as NewArrival } from "./new/NewArrival";
 export { default as BigDiscount } from "./bigDiscount/BigDiscount";
 export { default as Brands } from "./brands/Brands";
 export { default as Error404 } from "./error404/Error404";
+export { default as Login } from "./login/Login";
+export { default as Register } from "./login/Register";

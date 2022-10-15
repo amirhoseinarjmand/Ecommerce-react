@@ -1,5 +1,7 @@
 import React from "react";
 import { FiInstagram } from "react-icons/fi";
+import { AiFillTwitterCircle , AiFillFacebook } from "react-icons/ai";
+import { IoLogoYoutube } from "react-icons/io";
 import "./Footer.css";
 
 const Footer = () => {
@@ -13,10 +15,10 @@ const Footer = () => {
         <span>بلاگ</span>
 
         <span>
-          <span>
-            <FiInstagram size={20} style={{ marginLeft: 5 }} />
-          </span>
-          <span>اینستاگرام</span>
+            <FiInstagram size={25} style={{ marginLeft: 5 }} />
+            <AiFillTwitterCircle size={25} style={{ marginLeft: 5 }} />
+            <AiFillFacebook size={25} style={{ marginLeft: 5 }} />
+            <IoLogoYoutube size={25} style={{ marginLeft: 5 }} />
         </span>
       </section>
 

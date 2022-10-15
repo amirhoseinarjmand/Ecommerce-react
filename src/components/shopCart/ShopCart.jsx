@@ -21,7 +21,7 @@ const ShopCart = () => {
 
   return (
     <>
-      <div className={`shop-cart center ${dark ? "darkMode" : ""}`}>
+      <div className={`${cartItems.length < 2 ? "shop-cart-height" : "shop-cart"} center ${dark ? "darkMode" : ""}`}>
         <Header />
 
         <section className="shop-cart__body container">

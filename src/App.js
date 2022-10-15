@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import { Pages, ShopCart , Error404} from "./components";
+// componets
+import { Pages, ShopCart, Error404, Login, Register } from "./components";
 import { pageContext } from "./context/pageContext";
 import { confirmAlert } from "react-confirm-alert";
+// css
 import "./App.css";
 import "./common/DarkMode.css";
 
@@ -183,6 +185,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Pages />} />
           <Route path="/shopCart" element={<ShopCart />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/Register" element={<Register />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </pageContext.Provider>

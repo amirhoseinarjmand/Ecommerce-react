@@ -3,6 +3,19 @@ import { Link } from "react-router-dom";
 import "./Error404.css";
 
 const Error404 = () => {
+  let X = 0;
+  let Y = 0;
+
+  window.addEventListener("mousemove", (e) => {
+    X = e.clientX / 5;
+    Y = e.clientY / 5;
+
+    const ErrorElem = document.querySelector(".Error404");
+
+    ErrorElem.style.backgroundPositionX = X + "px";
+    ErrorElem.style.backgroundPositionY = Y + "px";
+  });
+
   return (
     <div className="Error404 center">
       <span className="Error404-number">404</span>
