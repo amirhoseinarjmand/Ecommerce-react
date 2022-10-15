@@ -16,6 +16,19 @@ const TopCart = () => {
           delay: 3500,
           disableOnInteraction: false,
         }}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+        }}
         modules={[Autoplay]}
         className="AmazingCard"
       >
