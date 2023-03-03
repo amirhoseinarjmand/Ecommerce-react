@@ -13,7 +13,7 @@ const TopCart = () => {
         loop={true}
         loopFillGroupWithBlank={true}
         autoplay={{
-          delay: 3500,
+          delay: 1000,
           disableOnInteraction: false,
         }}
         breakpoints={{

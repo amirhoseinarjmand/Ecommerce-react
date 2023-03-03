@@ -4,7 +4,7 @@ import "./NewArrival.css";
 
 const NewArrival = () => {
   return (
-    <div className="NewArrival container-lg">
+    <div className="NewArrival container-lg" id="newArrive">
       <section className="Top__title">
         <span
           style={{

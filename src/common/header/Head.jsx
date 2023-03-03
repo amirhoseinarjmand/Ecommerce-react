@@ -17,7 +17,7 @@ export default function Head() {
         dir="ltr"
         navigation={true}
         autoplay={{
-          delay: 3000,
+          delay: 1000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay, Navigation]}
